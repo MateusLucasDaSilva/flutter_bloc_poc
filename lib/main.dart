@@ -3,6 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_bloc_poc/count_bloc/count_bloc.dart';
 import 'package:flutter_bloc_poc/count_bloc/count_bloc_page.dart';
 import 'package:flutter_bloc_poc/count_cubit/count_cubit_page.dart';
+import 'package:flutter_bloc_poc/features/bloc_example/bloc/example_bloc.dart';
+import 'package:flutter_bloc_poc/features/bloc_example/bloc_example_page.dart';
 import 'package:flutter_bloc_poc/home_page.dart';
 
 void main() {
@@ -25,7 +27,13 @@ class MyApp extends StatelessWidget {
               child: const CountCubitPage(),
             ),
         '/bloc': (_) => BlocProvider(
-            create: (_) => CountBloc(), child: const CountBlocPage()),
+              create: (_) => CountBloc(),
+              child: const CountBlocPage(),
+            ),
+        '/bloc_example': (_) => BlocProvider(
+              create: (_) => ExampleBloc()..add(ExampleFindNameEvent()),
+              child: const BlocExamplePage(),
+            ),
       },
       home: const HomePage(),
     );
