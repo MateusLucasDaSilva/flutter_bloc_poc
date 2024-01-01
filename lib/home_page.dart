@@ -15,16 +15,12 @@ class HomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             TextButton(
-              onPressed: () => Navigator.pushNamed(context, '/cubit'),
-              child: const Text('Cubit'),
-            ),
-            TextButton(
-              onPressed: () => Navigator.pushNamed(context, '/bloc'),
-              child: const Text('Bloc'),
-            ),
-            TextButton(
               onPressed: () => Navigator.pushNamed(context, '/bloc_example'),
-              child: const Text('Bloc Example'),
+              child: const Text('Bloc '),
+            ),
+            TextButton(
+              onPressed: () => Navigator.pushNamed(context, '/bloc_freezed'),
+              child: const Text('Bloc com freezed'),
             ),
           ],
         ),
