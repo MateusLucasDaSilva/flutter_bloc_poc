@@ -484,18 +484,24 @@ mixin _$BlocFreezedState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(String message) notification,
     required TResult Function(List<String> names) data,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(String message)? notification,
     TResult? Function(List<String> names)? data,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(String message)? notification,
     TResult Function(List<String> names)? data,
     required TResult orElse(),
   }) =>
@@ -503,18 +509,24 @@ mixin _$BlocFreezedState {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_BlocFreezedStateInitial value) initial,
+    required TResult Function(_BlocFreezedStateLoading value) loading,
+    required TResult Function(_BlocFreezedStateNotification value) notification,
     required TResult Function(_BlocFreezedStateData value) data,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_BlocFreezedStateInitial value)? initial,
+    TResult? Function(_BlocFreezedStateLoading value)? loading,
+    TResult? Function(_BlocFreezedStateNotification value)? notification,
     TResult? Function(_BlocFreezedStateData value)? data,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_BlocFreezedStateInitial value)? initial,
+    TResult Function(_BlocFreezedStateLoading value)? loading,
+    TResult Function(_BlocFreezedStateNotification value)? notification,
     TResult Function(_BlocFreezedStateData value)? data,
     required TResult orElse(),
   }) =>
@@ -581,6 +593,8 @@ class _$BlocFreezedStateInitialImpl implements _BlocFreezedStateInitial {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(String message) notification,
     required TResult Function(List<String> names) data,
   }) {
     return initial();
@@ -590,6 +604,8 @@ class _$BlocFreezedStateInitialImpl implements _BlocFreezedStateInitial {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(String message)? notification,
     TResult? Function(List<String> names)? data,
   }) {
     return initial?.call();
@@ -599,6 +615,8 @@ class _$BlocFreezedStateInitialImpl implements _BlocFreezedStateInitial {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(String message)? notification,
     TResult Function(List<String> names)? data,
     required TResult orElse(),
   }) {
@@ -612,6 +630,8 @@ class _$BlocFreezedStateInitialImpl implements _BlocFreezedStateInitial {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_BlocFreezedStateInitial value) initial,
+    required TResult Function(_BlocFreezedStateLoading value) loading,
+    required TResult Function(_BlocFreezedStateNotification value) notification,
     required TResult Function(_BlocFreezedStateData value) data,
   }) {
     return initial(this);
@@ -621,6 +641,8 @@ class _$BlocFreezedStateInitialImpl implements _BlocFreezedStateInitial {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_BlocFreezedStateInitial value)? initial,
+    TResult? Function(_BlocFreezedStateLoading value)? loading,
+    TResult? Function(_BlocFreezedStateNotification value)? notification,
     TResult? Function(_BlocFreezedStateData value)? data,
   }) {
     return initial?.call(this);
@@ -630,6 +652,8 @@ class _$BlocFreezedStateInitialImpl implements _BlocFreezedStateInitial {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_BlocFreezedStateInitial value)? initial,
+    TResult Function(_BlocFreezedStateLoading value)? loading,
+    TResult Function(_BlocFreezedStateNotification value)? notification,
     TResult Function(_BlocFreezedStateData value)? data,
     required TResult orElse(),
   }) {
@@ -642,6 +666,276 @@ class _$BlocFreezedStateInitialImpl implements _BlocFreezedStateInitial {
 
 abstract class _BlocFreezedStateInitial implements BlocFreezedState {
   factory _BlocFreezedStateInitial() = _$BlocFreezedStateInitialImpl;
+}
+
+/// @nodoc
+abstract class _$$BlocFreezedStateLoadingImplCopyWith<$Res> {
+  factory _$$BlocFreezedStateLoadingImplCopyWith(
+          _$BlocFreezedStateLoadingImpl value,
+          $Res Function(_$BlocFreezedStateLoadingImpl) then) =
+      __$$BlocFreezedStateLoadingImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$BlocFreezedStateLoadingImplCopyWithImpl<$Res>
+    extends _$BlocFreezedStateCopyWithImpl<$Res, _$BlocFreezedStateLoadingImpl>
+    implements _$$BlocFreezedStateLoadingImplCopyWith<$Res> {
+  __$$BlocFreezedStateLoadingImplCopyWithImpl(
+      _$BlocFreezedStateLoadingImpl _value,
+      $Res Function(_$BlocFreezedStateLoadingImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$BlocFreezedStateLoadingImpl implements _BlocFreezedStateLoading {
+  _$BlocFreezedStateLoadingImpl();
+
+  @override
+  String toString() {
+    return 'BlocFreezedState.loading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$BlocFreezedStateLoadingImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(String message) notification,
+    required TResult Function(List<String> names) data,
+  }) {
+    return loading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(String message)? notification,
+    TResult? Function(List<String> names)? data,
+  }) {
+    return loading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(String message)? notification,
+    TResult Function(List<String> names)? data,
+    required TResult orElse(),
+  }) {
+    if (loading != null) {
+      return loading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_BlocFreezedStateInitial value) initial,
+    required TResult Function(_BlocFreezedStateLoading value) loading,
+    required TResult Function(_BlocFreezedStateNotification value) notification,
+    required TResult Function(_BlocFreezedStateData value) data,
+  }) {
+    return loading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_BlocFreezedStateInitial value)? initial,
+    TResult? Function(_BlocFreezedStateLoading value)? loading,
+    TResult? Function(_BlocFreezedStateNotification value)? notification,
+    TResult? Function(_BlocFreezedStateData value)? data,
+  }) {
+    return loading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_BlocFreezedStateInitial value)? initial,
+    TResult Function(_BlocFreezedStateLoading value)? loading,
+    TResult Function(_BlocFreezedStateNotification value)? notification,
+    TResult Function(_BlocFreezedStateData value)? data,
+    required TResult orElse(),
+  }) {
+    if (loading != null) {
+      return loading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _BlocFreezedStateLoading implements BlocFreezedState {
+  factory _BlocFreezedStateLoading() = _$BlocFreezedStateLoadingImpl;
+}
+
+/// @nodoc
+abstract class _$$BlocFreezedStateNotificationImplCopyWith<$Res> {
+  factory _$$BlocFreezedStateNotificationImplCopyWith(
+          _$BlocFreezedStateNotificationImpl value,
+          $Res Function(_$BlocFreezedStateNotificationImpl) then) =
+      __$$BlocFreezedStateNotificationImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String message});
+}
+
+/// @nodoc
+class __$$BlocFreezedStateNotificationImplCopyWithImpl<$Res>
+    extends _$BlocFreezedStateCopyWithImpl<$Res,
+        _$BlocFreezedStateNotificationImpl>
+    implements _$$BlocFreezedStateNotificationImplCopyWith<$Res> {
+  __$$BlocFreezedStateNotificationImplCopyWithImpl(
+      _$BlocFreezedStateNotificationImpl _value,
+      $Res Function(_$BlocFreezedStateNotificationImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = null,
+  }) {
+    return _then(_$BlocFreezedStateNotificationImpl(
+      message: null == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$BlocFreezedStateNotificationImpl
+    implements _BlocFreezedStateNotification {
+  _$BlocFreezedStateNotificationImpl({required this.message});
+
+  @override
+  final String message;
+
+  @override
+  String toString() {
+    return 'BlocFreezedState.notification(message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$BlocFreezedStateNotificationImpl &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, message);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$BlocFreezedStateNotificationImplCopyWith<
+          _$BlocFreezedStateNotificationImpl>
+      get copyWith => __$$BlocFreezedStateNotificationImplCopyWithImpl<
+          _$BlocFreezedStateNotificationImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(String message) notification,
+    required TResult Function(List<String> names) data,
+  }) {
+    return notification(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(String message)? notification,
+    TResult? Function(List<String> names)? data,
+  }) {
+    return notification?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(String message)? notification,
+    TResult Function(List<String> names)? data,
+    required TResult orElse(),
+  }) {
+    if (notification != null) {
+      return notification(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_BlocFreezedStateInitial value) initial,
+    required TResult Function(_BlocFreezedStateLoading value) loading,
+    required TResult Function(_BlocFreezedStateNotification value) notification,
+    required TResult Function(_BlocFreezedStateData value) data,
+  }) {
+    return notification(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_BlocFreezedStateInitial value)? initial,
+    TResult? Function(_BlocFreezedStateLoading value)? loading,
+    TResult? Function(_BlocFreezedStateNotification value)? notification,
+    TResult? Function(_BlocFreezedStateData value)? data,
+  }) {
+    return notification?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_BlocFreezedStateInitial value)? initial,
+    TResult Function(_BlocFreezedStateLoading value)? loading,
+    TResult Function(_BlocFreezedStateNotification value)? notification,
+    TResult Function(_BlocFreezedStateData value)? data,
+    required TResult orElse(),
+  }) {
+    if (notification != null) {
+      return notification(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _BlocFreezedStateNotification implements BlocFreezedState {
+  factory _BlocFreezedStateNotification({required final String message}) =
+      _$BlocFreezedStateNotificationImpl;
+
+  String get message;
+  @JsonKey(ignore: true)
+  _$$BlocFreezedStateNotificationImplCopyWith<
+          _$BlocFreezedStateNotificationImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -718,6 +1012,8 @@ class _$BlocFreezedStateDataImpl implements _BlocFreezedStateData {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(String message) notification,
     required TResult Function(List<String> names) data,
   }) {
     return data(names);
@@ -727,6 +1023,8 @@ class _$BlocFreezedStateDataImpl implements _BlocFreezedStateData {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(String message)? notification,
     TResult? Function(List<String> names)? data,
   }) {
     return data?.call(names);
@@ -736,6 +1034,8 @@ class _$BlocFreezedStateDataImpl implements _BlocFreezedStateData {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(String message)? notification,
     TResult Function(List<String> names)? data,
     required TResult orElse(),
   }) {
@@ -749,6 +1049,8 @@ class _$BlocFreezedStateDataImpl implements _BlocFreezedStateData {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_BlocFreezedStateInitial value) initial,
+    required TResult Function(_BlocFreezedStateLoading value) loading,
+    required TResult Function(_BlocFreezedStateNotification value) notification,
     required TResult Function(_BlocFreezedStateData value) data,
   }) {
     return data(this);
@@ -758,6 +1060,8 @@ class _$BlocFreezedStateDataImpl implements _BlocFreezedStateData {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_BlocFreezedStateInitial value)? initial,
+    TResult? Function(_BlocFreezedStateLoading value)? loading,
+    TResult? Function(_BlocFreezedStateNotification value)? notification,
     TResult? Function(_BlocFreezedStateData value)? data,
   }) {
     return data?.call(this);
@@ -767,6 +1071,8 @@ class _$BlocFreezedStateDataImpl implements _BlocFreezedStateData {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_BlocFreezedStateInitial value)? initial,
+    TResult Function(_BlocFreezedStateLoading value)? loading,
+    TResult Function(_BlocFreezedStateNotification value)? notification,
     TResult Function(_BlocFreezedStateData value)? data,
     required TResult orElse(),
   }) {

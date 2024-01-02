@@ -37,8 +37,10 @@ class BlocFreezedExample extends Bloc<BlocFreezedEvent, BlocFreezedState> {
       data: (names) => names,
       orElse: () => <String>[],
     );
-    final newNames = [...names];
-    newNames.add(event.name);
+    emit(BlocFreezedState.notification(
+        message: 'O ${event.name} foi adicionado!'));
+    final List<String> newNames = [...names];
+    newNames.insert(0, event.name);
     emit(BlocFreezedState.data(names: newNames));
   }
 
@@ -46,6 +48,7 @@ class BlocFreezedExample extends Bloc<BlocFreezedEvent, BlocFreezedState> {
     _BlocFreezedEventFindNames event,
     Emitter<BlocFreezedState> emit,
   ) async {
+    emit(BlocFreezedState.loading());
     await Future.delayed(const Duration(seconds: 3));
     final names = [
       'Mateus',
