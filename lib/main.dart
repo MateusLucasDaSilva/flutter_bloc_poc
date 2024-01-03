@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_bloc_poc/features/bloc_cubit/bloc_cubit_page.dart';
+import 'package:flutter_bloc_poc/features/bloc_cubit/cubit/bloc_cubit_example.dart';
 import 'package:flutter_bloc_poc/features/bloc_example/bloc/example_bloc.dart';
 import 'package:flutter_bloc_poc/features/bloc_example/bloc_example_page.dart';
 import 'package:flutter_bloc_poc/features/bloc_freezed/bloc/bloc_freezed_example.dart';
@@ -29,6 +31,10 @@ class MyApp extends StatelessWidget {
               create: (_) =>
                   BlocFreezedExample()..add(const BlocFreezedEvent.findNames()),
               child: const BlocFreezedPage(),
+            ),
+        '/bloc_cubit': (_) => BlocProvider(
+              create: (_) => BlocCubitExample()..findNames(),
+              child: const BlocCubitPage(),
             ),
       },
       home: const HomePage(),

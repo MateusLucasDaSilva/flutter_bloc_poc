@@ -49,7 +49,7 @@ class BlocFreezedExample extends Bloc<BlocFreezedEvent, BlocFreezedState> {
     Emitter<BlocFreezedState> emit,
   ) async {
     emit(BlocFreezedState.loading());
-    await Future.delayed(const Duration(seconds: 3));
+    await Future.delayed(const Duration(seconds: 1));
     final names = [
       'Mateus',
       'Lucas',
@@ -59,6 +59,5 @@ class BlocFreezedExample extends Bloc<BlocFreezedEvent, BlocFreezedState> {
       'Ana',
     ];
     emit(BlocFreezedState.data(names: names));
-    return null;
   }
 }
